@@ -12,33 +12,48 @@ struct Onboard1: View {
     @State private var countPage = 3
     var body: some View {
         VStack{
-            Text("добро\nпожаловать")
-                .textCase(.uppercase)
-                .font(.custom("Raleway-Black", size: 30))
-                .multilineTextAlignment(.center)
-                .foregroundColor(.veryLightGray)
-                .frame(maxWidth: .infinity, alignment: .top)
-            Image("preview1")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 410, maxHeight: 400)
-            
-            generateCapsuleForPages(countPage, selectedPage)
-            
-            Button(action: {
+            Spacer()
                 
-            }) {
-                Text("Начать")
-                    .foregroundColor(.veryDarkGray)
+            VStack{
+                Text("добро\nпожаловать")
+                    .textCase(.uppercase)
+                    .font(.custom("Raleway-Black", size: 30))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.veryLightGray)
+                    .offset(y: -60)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 17)
-                    .background(Color.veryLightGray)
-                    .clipShape(RoundedRectangle(cornerRadius: 13))
+                Image("preview1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 410, maxHeight: 340)
+                    
+                
+                generateCapsuleForPages(countPage, selectedPage)
             }
-            .padding(.horizontal,20)
+            .background(Image("tile1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .offset(y: -25)
+                        
+            )
+            Spacer()
+                
+                Button(action: {
+                    
+                }) {
+                    Text("Начать")
+                        .foregroundColor(.veryDarkGray)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 17)
+                        .background(Color.veryLightGray)
+                        .clipShape(RoundedRectangle(cornerRadius: 13))
+                }
+                .padding(.horizontal,20)
+            
         }
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
         .background(LinearGradient(colors: [.darkBlue, .lightBlue], startPoint: .bottom, endPoint: .top))
         
     }
