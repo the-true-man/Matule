@@ -10,13 +10,18 @@ import SwiftUI
 struct Onboard1: View {
     @Binding var selectedPage: Int
     @State private var countPage = 3
+    
     var body: some View {
-        VStack{
-            Spacer()
+        VStack {
+#warning("Лишний Spacer")
+            /*
+             В данном случае Spacer() не играет никакой роли, все элементы в VStack и так подефолту располоагаются посередине
+             */
+           // Spacer()
             
             Text("добро\nпожаловать")
                 .textCase(.uppercase)
-                .font(.custom("Raleway-Black", size: 30))
+                .raleway(size: 30, weight: .black)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.veryLightGray)
                 .offset(y: -60)
@@ -29,14 +34,20 @@ struct Onboard1: View {
             
             Onboards.generateCapsuleForPages(countPage, selectedPage)
             
-            Spacer()
+#warning("Лишний Spacer")
+            /*
+             
+             Тоже самое
+             
+             */
+           // Spacer()
         }
-        
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image("tile1")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .offset(y: -25)
+        .background(
+            Image("tile1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .offset(y: -25)
         )
     }
     

@@ -12,7 +12,7 @@ import SwiftUI
 struct matuleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
