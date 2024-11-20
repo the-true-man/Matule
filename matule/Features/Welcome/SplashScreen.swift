@@ -7,20 +7,29 @@
 
 import SwiftUI
 
+#warning("SplashScreen?")
+
+/*
+ 
+SplashScreen так не создается, на чемпионате такое не засчитают
+Нажимаешь правой кнопкой мыши в менеджере файлов, выбираешь New File From Templates и выбираешь Launch Screen - таким образос создается SplashScreen
+ 
+ */
+
 struct SplashScreen: View {
     @State var textSize: CGFloat = 65
 
     var body: some View {
         HStack {
             Text("matule")
-                .font(.custom("Raleway-Bold", size: textSize))
+                .raleway(size: textSize, weight: .bold)
                 .textCase(.uppercase)
                 .foregroundColor(.white)
             
             Text("me")
-                .font(.custom("Raleway-Light", size: textSize-30))
+                .raleway(size: textSize - 30, weight: .light)
                 .textCase(.uppercase)
-                .frame(maxHeight: textSize,alignment: .top)
+                .frame(maxHeight: textSize, alignment: .top)
                 .foregroundColor(.white)
         }
         .padding(21)

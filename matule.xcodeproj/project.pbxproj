@@ -33,7 +33,7 @@
 		DB28BDE22CEC2E0E002A1C04 /* Exceptions for "matule" folder in "matule" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = DBC1EBF32CEC2BCB00A8F972 /* matule */;
 		};
@@ -56,11 +56,6 @@
 		DBC1EC112CEC2BCC00A8F972 /* matuleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = matuleUITests;
-			sourceTree = "<group>";
-		};
-		DBC1EC212CEC2C0F00A8F972 /* fonts */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -93,7 +88,6 @@
 		DBC1EBEB2CEC2BCB00A8F972 = {
 			isa = PBXGroup;
 			children = (
-				DBC1EC212CEC2C0F00A8F972 /* fonts */,
 				DBC1EBF62CEC2BCB00A8F972 /* matule */,
 				DBC1EC072CEC2BCC00A8F972 /* matuleTests */,
 				DBC1EC112CEC2BCC00A8F972 /* matuleUITests */,
@@ -128,7 +122,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DBC1EBF62CEC2BCB00A8F972 /* matule */,
-				DBC1EC212CEC2C0F00A8F972 /* fonts */,
 			);
 			name = matule;
 			packageProductDependencies = (
@@ -419,7 +412,7 @@
 				DEVELOPMENT_TEAM = 438T7YBU9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = matule/Info.plist;
+				INFOPLIST_FILE = matule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,7 +442,7 @@
 				DEVELOPMENT_TEAM = 438T7YBU9N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = matule/Info.plist;
+				INFOPLIST_FILE = matule/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

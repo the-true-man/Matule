@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct WelcomeViews: View {
+struct WelcomeView: View {
     @State private var isLoading = true
 
     var body: some View {
+#warning("ZStack лучше не использовать, для того, чтобы задать задний фон используй .background")
+        
         ZStack{
             LinearGradient(colors: [.darkBlue, .lightBlue], startPoint: .bottom, endPoint: .top)
                 .edgesIgnoringSafeArea(.all)
             if isLoading {
+#warning("Такой реализации SplashScreen'а не должно быть, не засчитают")
                 SplashScreen()
                     .onAppear() {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -27,14 +30,11 @@ struct WelcomeViews: View {
             else{
                 Onboards()
                     .transition(.opacity)
-                
             }
-            
         }
-        
     }
 }
 
 #Preview {
-    WelcomeViews()
+    WelcomeView()
 }
