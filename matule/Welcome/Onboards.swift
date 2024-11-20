@@ -12,11 +12,12 @@ struct Onboards: View {
     @State var textInBtn = "Начать"
     
     var body: some View {
+        
         VStack {
             switchOnboard()
-           
+            
             Button(action: {
-                withAnimation(.easeInOut(duration: 0.4)){
+                withAnimation(.easeInOut(duration: 0.4)) {
                     selectedPage+=1
                 }
             }) {
@@ -27,7 +28,6 @@ struct Onboards: View {
                     .background(Color.veryLightGray)
                     .clipShape(RoundedRectangle(cornerRadius: 13))
             }
-            
             .padding(.horizontal,20)
         }                .transition(.opacity)
         
@@ -55,6 +55,10 @@ struct Onboards: View {
             AnyView(Onboard2(selectedPage: $selectedPage)
                 .transition(.opacity)
             )
+        case 2:
+            AnyView(Onboard3(selectedPage: $selectedPage)
+                .transition(.opacity)
+            )
         default:
             AnyView(EmptyView()
                 .transition(.opacity)
@@ -69,6 +73,7 @@ struct Onboards: View {
                     .frame(maxWidth: selectedPage == i ? 42 : 28, maxHeight: 5)
             }
         }
+        .animation(nil)
     }
 }
 

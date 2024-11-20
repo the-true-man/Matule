@@ -18,6 +18,7 @@ struct Onboard2: View {
             Image("preview2")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(maxHeight: 400)
             Text("Начнем\nпутешествие")
                 .font(.custom("Raleway-Bold", size: 34))
                 .foregroundColor(.veryLightGray)
